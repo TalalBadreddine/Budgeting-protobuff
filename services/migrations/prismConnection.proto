@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "utils/error.proto";
+
+package services.migrations;
+
+message GenerateMigrationsResponse {
+    utils.ErrorMessage Error = 1;
+    string status = 2;
+}
+
+message GenerateMigrationsRequest {
+}
+
+service PrismConnectionService {
+  rpc GenerateMigrations(GenerateMigrationsRequest) returns (GenerateMigrationsResponse);
+}
