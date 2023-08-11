@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "utils/error.proto";
+import "services/utils/error.proto";
 
 package services.migrations;
 
